@@ -6,8 +6,16 @@
   <div class="row">
     <div class="col">
       <h1>A pirate's life is for me</h1>
-      <p>Hempen halter mizzenmast deadlights gaff pillage starboard jack lee Blimey draught. Man-of-war piracy black jack sutler Yellow Jack keel provost overhaul execution dock rigging. Log quarterdeck dead men tell no tales red ensign gibbet grog blossom bilge Nelsons folly code of conduct gunwalls.</p>
+      <p>Welcome to Capt. McGillicutty’s Ship’s Log — a rowdy collection of tales from the high seas, where adventure, danger, and the occasional kraken await. From mutinies and treasure hunts to stormy nights and grog-fueled brawls, this blog chronicles the wild life of pirates who sail by no man’s rules. Grab a mug of rum and dive into our salty stories! 🏴‍☠️.</p>
+      {% for blog in blog.blogs %}
+      <h2>
+      <a href="blog/{{ blog.slug }}.html">{{ blog.headline }}</a>
+    </h2>
+      <p>{{ blog.date }}</p>
+      {% endfor %}
     </div>
   </div>
 </div>
+
+
 {% endblock %}
